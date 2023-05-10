@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'HomePage.dart'; // Yeni dosyamızı ekliyoruz
-
+import 'Bilgilerim.dart';
 void main() {
   runApp(MyApp());
 }

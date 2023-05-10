@@ -1,3 +1,4 @@
+import 'package:deneme/Bilgilerim.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -41,9 +42,14 @@ class HomePage extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Beşinci butonun işlevselliği buraya yazılabilir
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                    builder: (context) => MyInfoPage(),
+                    ),
+    );
                   },
-                  child: Text('Buton 5'),
+                  child: Text('İletişim'),
                 ),
               ],
             ),
