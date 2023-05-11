@@ -1,5 +1,7 @@
 import 'package:deneme/Bilgilerim.dart';
 import 'package:flutter/material.dart';
+import 'RegisterPage.dart';
+import 'Login.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -30,15 +32,21 @@ class HomePage extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Üçüncü butonun işlevselliği buraya yazılabilir
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+);
                   },
-                  child: Text('Buton 3'),
+                  child: Text('Giriş Yap'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Dördüncü butonun işlevselliği buraya yazılabilir
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RegisterPage()),
+  );
                   },
-                  child: Text('Buton 4'),
+                  child: Text('Kayıt Ol'),
                 ),
                 ElevatedButton(
                   onPressed: () {
@@ -55,11 +63,18 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Center(
-              child: Text(
-                'Hoşgeldiniz',
-                style: TextStyle(fontSize: 24),
+            child: Column(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+             Text( 'Hoşgeldiniz', style: TextStyle(fontSize: 24),),
+             SizedBox(height: 16),
+             Image.asset(
+             'assets/images/3.jpg', 
+              //width: 200,
+              //height: 200,
+              fit: BoxFit.contain,
               ),
+              ],
             ),
           ),
         ],
