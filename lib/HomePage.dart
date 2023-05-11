@@ -65,16 +65,16 @@ class HomePage extends StatelessWidget {
           Expanded(
             child: Column(
              mainAxisAlignment: MainAxisAlignment.center,
-             children: [
-             Text( 'Hoşgeldiniz', style: TextStyle(fontSize: 24),),
-             SizedBox(height: 16),
-             Image.asset(
-             'assets/images/3.jpg', 
+             //children: [
+             //Text( 'Hoşgeldiniz', style: TextStyle(fontSize: 24),),
+             //SizedBox(height: 16),
+             //Image.asset(
+             //'assets/images/3.jpg', 
               //width: 200,
               //height: 200,
-              fit: BoxFit.contain,
-              ),
-              ],
+              //fit: BoxFit.contain,
+              //),
+              //],
             ),
           ),
         ],
