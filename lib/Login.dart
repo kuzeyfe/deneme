@@ -55,6 +55,6 @@ class _LoginPageState extends State<LoginPage> {
     // Örneğin, bir kullanıcı veritabanıyla doğrulama yapabilirsiniz
 
     // Giriş işlemi başarılıysa ana sayfaya yönlendirin
-    Navigator.pushReplacementNamed(context, '/home');
+    Navigator.pushReplacementNamed(context, '/');
   }
 }
