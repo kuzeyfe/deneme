@@ -6,6 +6,7 @@ import 'Login.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         title: Text('Deneme Uygulaması'),
@@ -13,7 +14,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            color: Colors.blue,
+            color: Color.fromARGB(255, 5, 5, 5),
             padding: EdgeInsets.all(16.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -65,16 +66,14 @@ class HomePage extends StatelessWidget {
           Expanded(
             child: Column(
              mainAxisAlignment: MainAxisAlignment.center,
-             //children: [
-             //Text( 'Hoşgeldiniz', style: TextStyle(fontSize: 24),),
-             //SizedBox(height: 16),
-             //Image.asset(
-             //'assets/images/3.jpg', 
-              //width: 200,
-              //height: 200,
-              //fit: BoxFit.contain,
-              //),
-              //],
+             children: [
+             Text( 'Hoşgeldiniz', style: TextStyle(fontSize: 24),),
+             SizedBox(height: 16),
+             Image.asset(
+             'images/3.png', 
+              fit: BoxFit.contain,
+              ),
+              ],
             ),
           ),
         ],

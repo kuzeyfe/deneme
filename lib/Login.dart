@@ -1,46 +1,60 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
 
-  void _login() {
-    // Giriş işlemleri burada gerçekleştirilebilir
-    String email = _emailController.text;
-    String password = _passwordController.text;
-    // Giriş işlemleri burada gerçekleştirilebilir, örneğin bir API çağrısı yapılabilir
-
-    // Giriş işlemi başarılıysa kullanıcıyı başka bir sayfaya yönlendirebilirsiniz
-  }
+class _LoginPageState extends State<LoginPage> {
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Giriş Sayfası'),
+        title: Text('Giriş Yap'),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            TextFormField(
-              controller: _emailController,
-              decoration: InputDecoration(labelText: 'E-posta'),
+          children: [
+            TextField(
+              controller: usernameController,
+              decoration: InputDecoration(
+                labelText: 'Kullanıcı Adı',
+              ),
             ),
-            TextFormField(
-              controller: _passwordController,
-              decoration: InputDecoration(labelText: 'Şifre'),
+            SizedBox(height: 16.0),
+            TextField(
+              controller: passwordController,
+              decoration: InputDecoration(
+                labelText: 'Şifre',
+              ),
               obscureText: true,
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
-              onPressed: _login,
+              onPressed: () {
+                String username = usernameController.text;
+                String password = passwordController.text;
+
+                loginUser(username, password);
+              },
               child: Text('Giriş Yap'),
             ),
           ],
         ),
       ),
     );
+  }
+
+  void loginUser(String username, String password) {
+    // TODO: Kullanıcı giriş işlemini burada gerçekleştirin
+    // Örneğin, bir kullanıcı veritabanıyla doğrulama yapabilirsiniz
+
+    // Giriş işlemi başarılıysa ana sayfaya yönlendirin
+    Navigator.pushReplacementNamed(context, '/home');
   }
 }
